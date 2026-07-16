@@ -2,11 +2,10 @@
 
 This repository shows the step-by-step logic, security gates, and Role-Based Access Control (RBAC) layers used in our Public Library Management System demo.
 
----
 
-## System Logic Pipeline
+## System Logic
 
-### Phase 1: The Public Landing Gate (Welcome Page)
+## Phase 1: The Public Landing Gate (Welcome Page)
 * **Guest Access (Unauthenticated):** Visitors can only click "Explore Books" to view titles on the Browse Page. They are restricted to read-only access and cannot borrow, reserve, or view other system features.
 * **Registration Layer:** To unlock membership, a guest clicks "Sign Up". They must pass a security CAPTCHA (solving either a math problem or a Philippine History trivia question) to block automated bot accounts.
 * **Approval Lock:** Successfully registered accounts are automatically set to `PENDING` status in the database. The user is blocked from logging in until an Admin manually reviews and switches their account to `ACTIVE`.
@@ -37,4 +36,3 @@ Once the OTP is verified, the system checks the account's database role and rout
 * **Manual Borrowing Form Workflow:** A dedicated administrative fallback path used to log walk-in transactions manually. The admin searches for the specific member profile, populates the borrowed book fields and uploads a scanned copy or picture of the physical paper receipt in **PNG format** straight to the database records.# Welcome to your organization's demo respository
 This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
